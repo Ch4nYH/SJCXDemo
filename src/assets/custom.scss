@@ -27,3 +27,50 @@ body {
 .fullwidth {
     width: 100%!important;
 }
+
+.box {
+    display: inline-block; 
+    position: absolute; 
+    top:200px; 
+    left: 10%; 
+    right: 10%; 
+    height: 300px; 
+    background-color: white; 
+    opacity: 90%; 
+    border-radius: 5px; 
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5); 
+
+}
+
+.upload {
+    margin-top: 10px; 
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    color:#212C67; 
+    font-weight: 600; 
+    font-size: 20px;
+    height: 150px; 
+    border: 1px solid #ccc; 
+    vertical-align: middle;
+}
+
+.scene-container {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+
+.button-item {
+    width: 25%;
+    height: 50px;
+}
+.button-item a {
+    color: black;   
+}
+.button-item:last-child {
+    border-right: 0px;
+}

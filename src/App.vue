@@ -30,18 +30,20 @@
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav>
-					<b-nav-item href="#">Link</b-nav-item>
-					<b-nav-item href="#" disabled>Disabled</b-nav-item>
+					<b-nav-item href="#">My Shop</b-nav-item>
+					<b-nav-item href="#">Models</b-nav-item>
+					<b-nav-item href="#">Notes</b-nav-item>
+					<b-nav-item href="#">Account</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-navbar>
-
-		<b-navbar type="dark" variant="light" fixed="bottom">
+		<router-view></router-view>
+		<b-navbar type="dark" variant="light" fixed="bottom" style="border-top: 1px solid #eee;">
 			<b-nav pills align="center" class="fullwidth">
-				<b-nav-item>My Shop</b-nav-item>
-				<b-nav-item>Models </b-nav-item>
-				<b-nav-item>Notes</b-nav-item>
-				<b-nav-item>Account</b-nav-item>
+				<b-nav-item class="button-item" >My Shop</b-nav-item>
+				<b-nav-item class="button-item" :to="{'name': 'model'}">Models</b-nav-item>
+				<b-nav-item class="button-item">Notes</b-nav-item>
+				<b-nav-item class="button-item">Account</b-nav-item>
 			</b-nav>
 		</b-navbar>
 	</div>
