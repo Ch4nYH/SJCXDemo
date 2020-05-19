@@ -24,19 +24,21 @@
 			</svg>
 		</div>
 		<div>
-		<b-navbar toggleable="lg" type="dark" variant="info" fixed="top" class="transparent">
+		<b-navbar toggleable="lg" type="dark" variant="info" fixed="top" class="transparent" v-show="!($route.name == 'customer')">
 			<b-navbar-brand href="#">Sofa Expert</b-navbar-brand>
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav>
-					<b-nav-item href="#">My Shop</b-nav-item>
-					<b-nav-item href="#">Models</b-nav-item>
-					<b-nav-item href="#">Notes</b-nav-item>
-					<b-nav-item href="#">Account</b-nav-item>
+					<b-nav-item to="customer">Customer View</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-navbar>
+		<b-form v-show="$route.name == 'customer'" >
+			<b-form-group>
+				<b-form-input class="search"></b-form-input>
+			</b-form-group>
+		</b-form>
 		<router-view></router-view>
 		<b-navbar type="dark" variant="light" fixed="bottom" style="border-top: 1px solid #eee;">
 			<b-nav pills align="center" class="fullwidth">
@@ -53,7 +55,10 @@
 
 <script>
 export default {
-	name: 'App'
+	name: 'App',
+	mounted () {
+		console.log(this.$route)
+	}
 }
 </script>
 
