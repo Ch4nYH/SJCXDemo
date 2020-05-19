@@ -68,11 +68,12 @@ body {
     width: 25%;
     height: 50px;
 }
-.button-item a {
-    color: black;   
+.button-item-s {
+    width: 20%;
+    height: 50px;
 }
-.button-item:last-child {
-    border-right: 0px;
+.button-item a, .button-item-s a {
+    color: black;   
 }
 
 .search {

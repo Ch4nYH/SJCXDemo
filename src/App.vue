@@ -40,12 +40,21 @@
 			</b-form-group>
 		</b-form>
 		<router-view></router-view>
-		<b-navbar type="dark" variant="light" fixed="bottom" style="border-top: 1px solid #eee;">
+		<b-navbar type="dark" variant="light" fixed="bottom" style="border-top: 1px solid #eee;" v-show="!($route.name == 'customer')">
 			<b-nav pills align="center" class="fullwidth">
 				<b-nav-item class="button-item" >My Shop</b-nav-item>
 				<b-nav-item class="button-item" :to="{'name': 'model'}">Models</b-nav-item>
 				<b-nav-item class="button-item">Notes</b-nav-item>
 				<b-nav-item class="button-item">Account</b-nav-item>
+			</b-nav>
+		</b-navbar>
+		<b-navbar type="dark" variant="light" fixed="bottom" style="border-top: 1px solid #eee;" v-show="($route.name == 'customer')">
+			<b-nav pills align="center" class="fullwidth">
+				<b-nav-item class="button-item-s" :to="{'name': 'model'}">Home</b-nav-item>
+				<b-nav-item class="button-item-s">AR</b-nav-item>
+				<b-nav-item class="button-item-s">Notes</b-nav-item>
+				<b-nav-item class="button-item-s">Cart</b-nav-item>
+				<b-nav-item class="button-item-s">Account</b-nav-item>
 			</b-nav>
 		</b-navbar>
 	</div>
