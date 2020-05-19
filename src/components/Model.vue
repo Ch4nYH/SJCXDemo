@@ -79,10 +79,11 @@ export default {
             this.scene.add(this.dirLight);
             //this.scene.add(new THREE.CameraHelper(this.dirLight.shadow.camera));
             // Geometry
-            /*this.mtlloader1.load("/assets/file.mtl", function(materials1) {
+            this.objloader1 = new OBJLoader()
+            this.mtlloader1.load("/assets/file.mtl", (materials1) => {
                 console.log(materials1);
                 this.objloader1.setMaterials(materials1);
-                this.objloader1.load("/assets/file.obj", function(obj) {
+                this.objloader1.load("/assets/file.obj", (obj) => {
                     console.log(obj);
                     obj.scale.set(0.005, 0.005, 0.005);
                     obj.traverse(function(child) {
@@ -92,7 +93,7 @@ export default {
                     this.scene.add(obj);
                     this.mesh1 = obj
                 })
-            })*/
+            })
 
             this.geometry = new THREE.BoxBufferGeometry(10, 0.1, 10);
             this.material = new THREE.MeshPhongMaterial({
